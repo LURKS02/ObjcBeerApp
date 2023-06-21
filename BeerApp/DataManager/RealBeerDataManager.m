@@ -5,18 +5,18 @@
 //  Created by 지혜 on 2023/06/21.
 //
 
-#import "BeerDataManager.h"
+#import "RealBeerDataManager.h"
 #import "BeerResponseItem.h"
 
-@implementation BeerDataManager
+@implementation RealBeerDataManager
 
 + (instancetype) sharedInstance {
     
-    static BeerDataManager* sharedInstance = nil;
+    static RealBeerDataManager* sharedInstance = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[BeerDataManager alloc] init];
+        sharedInstance = [[RealBeerDataManager alloc] init];
     });
     return sharedInstance;
 }
@@ -42,6 +42,7 @@
         }
     }];
     [downloadTask resume];
+
 }
 
 @end

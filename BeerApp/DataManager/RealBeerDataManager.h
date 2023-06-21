@@ -6,11 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BeerDataManagerProtocol.h"
 #import "Beer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BeerDataManager : NSObject
+@interface RealBeerDataManager : NSObject <BeerDataManagerProtocol>
 
 + (instancetype)sharedInstance;
 
