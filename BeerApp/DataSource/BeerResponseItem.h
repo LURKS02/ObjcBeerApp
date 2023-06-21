@@ -18,11 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSString* beerDescription;
 @property (strong, nonatomic) NSURL* imageURL;
 
-- (instancetype)initWithName: (NSString*) name
-                     tagline: (NSString*) tagline
-                 firstBrewed: (NSString*) firstBrewed
-             beerDescription: (NSString*) beerDescription
-                    imageURL: (NSURL*) imageURL;
+- (instancetype)initWithJSON: (NSDictionary*)json;
 
 - (Beer*)toDomainModel;
 

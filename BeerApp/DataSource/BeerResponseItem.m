@@ -9,21 +9,15 @@
 
 @implementation BeerResponseItem
 
-- (instancetype)initWithName: (NSString*) name
-                     tagline: (NSString*) tagline
-                 firstBrewed: (NSString*) firstBrewed
-             beerDescription: (NSString*) beerDescription
-                    imageURL: (NSURL*) imageURL {
-    
+- (instancetype)initWithJSON:(NSDictionary *)json {
     self = [super init];
-    if (self != nil) {
-        _name = name;
-        _tagline = tagline;
-        _firstBrewed = firstBrewed;
-        _beerDescription = beerDescription;
-        _imageURL = imageURL;
+    if (self) {
+        _name = json[@"name"];
+        _tagline = json[@"tagline"];
+        _firstBrewed = json[@"first_brewed"];
+        _beerDescription = json[@"description"];
+        _imageURL = [NSURL URLWithString: json[@"image_url"]];
     }
-    
     return self;
 }
 

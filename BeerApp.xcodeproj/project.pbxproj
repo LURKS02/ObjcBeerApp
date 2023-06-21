@@ -20,6 +20,7 @@
 		58964D612A42A300003CDEF9 /* BeerAppUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D602A42A300003CDEF9 /* BeerAppUITestsLaunchTests.m */; };
 		58964D702A42A4D8003CDEF9 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D6F2A42A4D8003CDEF9 /* Beer.m */; };
 		58964D752A42B56A003CDEF9 /* BeerResponseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D742A42B56A003CDEF9 /* BeerResponseItem.m */; };
+		58964D792A42BCFC003CDEF9 /* BeerDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D782A42BCFC003CDEF9 /* BeerDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		58964D6F2A42A4D8003CDEF9 /* Beer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Beer.m; sourceTree = "<group>"; };
 		58964D732A42B56A003CDEF9 /* BeerResponseItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerResponseItem.h; sourceTree = "<group>"; };
 		58964D742A42B56A003CDEF9 /* BeerResponseItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerResponseItem.m; sourceTree = "<group>"; };
+		58964D772A42BCFC003CDEF9 /* BeerDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerDataManager.h; sourceTree = "<group>"; };
+		58964D782A42BCFC003CDEF9 /* BeerDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +180,8 @@
 		58964D762A42BC65003CDEF9 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
+				58964D772A42BCFC003CDEF9 /* BeerDataManager.h */,
+				58964D782A42BCFC003CDEF9 /* BeerDataManager.m */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				58964D702A42A4D8003CDEF9 /* Beer.m in Sources */,
 				58964D3A2A42A2FE003CDEF9 /* SceneDelegate.m in Sources */,
 				58964D432A42A2FE003CDEF9 /* BeerApp.xcdatamodeld in Sources */,
+				58964D792A42BCFC003CDEF9 /* BeerDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
