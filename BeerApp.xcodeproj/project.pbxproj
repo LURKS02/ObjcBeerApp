@@ -21,6 +21,8 @@
 		58964D702A42A4D8003CDEF9 /* Beer.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D6F2A42A4D8003CDEF9 /* Beer.m */; };
 		58964D752A42B56A003CDEF9 /* BeerResponseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D742A42B56A003CDEF9 /* BeerResponseItem.m */; };
 		58964D792A42BCFC003CDEF9 /* BeerDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D782A42BCFC003CDEF9 /* BeerDataManager.m */; };
+		58964D802A42CE81003CDEF9 /* BeerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D7F2A42CE81003CDEF9 /* BeerTableViewController.m */; };
+		58964D842A42D819003CDEF9 /* BeerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D832A42D819003CDEF9 /* BeerTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,10 @@
 		58964D742A42B56A003CDEF9 /* BeerResponseItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerResponseItem.m; sourceTree = "<group>"; };
 		58964D772A42BCFC003CDEF9 /* BeerDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerDataManager.h; sourceTree = "<group>"; };
 		58964D782A42BCFC003CDEF9 /* BeerDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerDataManager.m; sourceTree = "<group>"; };
+		58964D7E2A42CE81003CDEF9 /* BeerTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerTableViewController.h; sourceTree = "<group>"; };
+		58964D7F2A42CE81003CDEF9 /* BeerTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerTableViewController.m; sourceTree = "<group>"; };
+		58964D822A42D819003CDEF9 /* BeerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerTableViewCell.h; sourceTree = "<group>"; };
+		58964D832A42D819003CDEF9 /* BeerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,9 @@
 		58964D342A42A2FE003CDEF9 /* BeerApp */ = {
 			isa = PBXGroup;
 			children = (
+				58964D7D2A42CDA0003CDEF9 /* Tests */,
+				58964D7C2A42CD8C003CDEF9 /* Constants */,
+				58964D7B2A42CD78003CDEF9 /* Utils */,
 				58964D762A42BC65003CDEF9 /* DataManager */,
 				58964D722A42B544003CDEF9 /* DataSource */,
 				58964D712A42A6B8003CDEF9 /* Presentation */,
@@ -162,6 +171,7 @@
 		58964D712A42A6B8003CDEF9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				58964D812A42D7F3003CDEF9 /* BeerList */,
 				58964D3E2A42A2FE003CDEF9 /* Main.storyboard */,
 				58964D462A42A2FF003CDEF9 /* LaunchScreen.storyboard */,
 			);
@@ -184,6 +194,38 @@
 				58964D782A42BCFC003CDEF9 /* BeerDataManager.m */,
 			);
 			path = DataManager;
+			sourceTree = "<group>";
+		};
+		58964D7B2A42CD78003CDEF9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		58964D7C2A42CD8C003CDEF9 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		58964D7D2A42CDA0003CDEF9 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		58964D812A42D7F3003CDEF9 /* BeerList */ = {
+			isa = PBXGroup;
+			children = (
+				58964D7E2A42CE81003CDEF9 /* BeerTableViewController.h */,
+				58964D7F2A42CE81003CDEF9 /* BeerTableViewController.m */,
+				58964D822A42D819003CDEF9 /* BeerTableViewCell.h */,
+				58964D832A42D819003CDEF9 /* BeerTableViewCell.m */,
+			);
+			path = BeerList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +359,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				58964D4B2A42A2FF003CDEF9 /* main.m in Sources */,
+				58964D842A42D819003CDEF9 /* BeerTableViewCell.m in Sources */,
+				58964D802A42CE81003CDEF9 /* BeerTableViewController.m in Sources */,
 				58964D3D2A42A2FE003CDEF9 /* ViewController.m in Sources */,
 				58964D752A42B56A003CDEF9 /* BeerResponseItem.m in Sources */,
 				58964D372A42A2FE003CDEF9 /* AppDelegate.m in Sources */,
