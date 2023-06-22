@@ -11,6 +11,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BeerTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *beerImageView;
+@property (weak, nonatomic) IBOutlet UILabel *beerName;
+@property (weak, nonatomic) IBOutlet UILabel *beerTagline;
+@property (weak, nonatomic) IBOutlet UILabel *beerFirstBrewed;
+@property (weak, nonatomic) IBOutlet UILabel *beerDescription;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -6,6 +6,10 @@
 //
 
 #import "AppDelegate.h"
+#import "BeerDataManagerProtocol.h"
+#import "RealBeerDataManager.h"
+#import "MockBeerDataManager.h"
+#import "BeerTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,7 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
     return YES;
 }
 

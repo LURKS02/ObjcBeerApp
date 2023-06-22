@@ -9,41 +9,100 @@
 
 @interface BeerTableViewController ()
 
+@property (nonatomic, strong) NSArray<Beer *> *beers;
+
 @end
 
 @implementation BeerTableViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.beerDataManager fetchBeers:^(NSArray<Beer *> *beers, NSError *error) {
+        if (beers) {
+            self.beers = beers;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }
+        else {
+            NSLog(@"Error fetching beers: %@", error);
+        }
+    }];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    _beerDataManager = [RealBeerDataManager new];
+    self.tableView.estimatedRowHeight = 500.0;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (instancetype)initWithDataManager: (id<BeerDataManagerProtocol>)beerDataManager {
+    
+    self = [super init];
+    if (self) {
+        self.beerDataManager = beerDataManager;
+    }
+    return self;
+    
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+/*- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 #warning Incomplete implementation, return the number of sections
     return 0;
-}
+}*/
+
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return [_beers count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    BeerTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier: @"beerTableViewCell" forIndexPath: indexPath];
+    Beer* target = [_beers objectAtIndex: indexPath.row];
+    
+    [self getImageFromURL:target.imageURL completion:^(UIImage *image){
+        dispatch_async(dispatch_get_main_queue(), ^{
+            BeerTableViewCell *updateCell = (id)[tableView cellForRowAtIndexPath: indexPath];
+            if (updateCell) {
+                updateCell.beerImageView.image = image;
+            }
+        });
+    }];
+    
+    //cell.beerImageView.image = [UIImage imageNamed: @"cats"];
+    
+    cell.beerName.text = target.name;
+    cell.beerTagline.text = target.tagline;
+    cell.beerFirstBrewed.text = target.firstBrewed;
+    cell.beerDescription.text = target.beerDescription;
+    
+    NSLog(@"indexPath: %@", indexPath);
+    NSLog(@"target: %@", target.name);
+    NSLog(@"cell: %@", cell);
     
     return cell;
 }
-*/
+
+- (void)getImageFromURL:(NSURL *)url completion:(void (^)(UIImage *image))completion {
+    NSURLSessionDownloadTask *downloadTask = [[NSURLSession sharedSession]
+                                              dataTaskWithURL: url completionHandler: ^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (data) {
+            UIImage *image = [UIImage imageWithData: data];
+            completion(image);
+        }
+    }];
+    
+    [downloadTask resume];
+}
 
 /*
 // Override to support conditional editing of the table view.
