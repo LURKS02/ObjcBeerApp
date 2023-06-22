@@ -10,15 +10,13 @@
 #import "RealBeerDataManager.h"
 #import "MockBeerDataManager.h"
 #import "BeerTableViewCell.h"
+#import "Constants.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface BeerTableViewController : UITableViewController<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) id<BeerDataManagerProtocol> beerDataManager;
-
-
-- (instancetype)initWithDataManager: (id<BeerDataManagerProtocol>)beerDataManager;
 
 @end
 

@@ -35,19 +35,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    _beerDataManager = [RealBeerDataManager new];
+    self.beerDataManager = IS_MOCKUP ? [MockBeerDataManager new] : [RealBeerDataManager new];
     self.tableView.estimatedRowHeight = 500.0;
     self.tableView.rowHeight = UITableViewAutomaticDimension;
-    
-}
-
-- (instancetype)initWithDataManager: (id<BeerDataManagerProtocol>)beerDataManager {
-    
-    self = [super init];
-    if (self) {
-        self.beerDataManager = beerDataManager;
-    }
-    return self;
     
 }
 
@@ -60,14 +50,14 @@
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [_beers count];
+    return [self.beers count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     BeerTableViewCell* cell = [tableView dequeueReusableCellWithIdentifier: @"beerTableViewCell" forIndexPath: indexPath];
-    Beer* target = [_beers objectAtIndex: indexPath.row];
+    Beer* target = [self.beers objectAtIndex: indexPath.row];
     
     [self getImageFromURL:target.imageURL completion:^(UIImage *image){
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -77,8 +67,6 @@
             }
         });
     }];
-    
-    //cell.beerImageView.image = [UIImage imageNamed: @"cats"];
     
     cell.beerName.text = target.name;
     cell.beerTagline.text = target.tagline;

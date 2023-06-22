@@ -75,6 +75,7 @@
 		58964D882A42ECD7003CDEF9 /* BeerDataManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerDataManagerProtocol.h; sourceTree = "<group>"; };
 		58964D892A42ED74003CDEF9 /* MockBeerDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockBeerDataManager.h; sourceTree = "<group>"; };
 		58964D8A2A42ED74003CDEF9 /* MockBeerDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockBeerDataManager.m; sourceTree = "<group>"; };
+		58964D8D2A4437B4003CDEF9 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +214,7 @@
 		58964D7C2A42CD8C003CDEF9 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				58964D8D2A4437B4003CDEF9 /* Constants.h */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
