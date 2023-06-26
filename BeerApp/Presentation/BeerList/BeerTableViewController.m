@@ -73,10 +73,6 @@
     cell.beerFirstBrewed.text = target.firstBrewed;
     cell.beerDescription.text = target.beerDescription;
     
-    NSLog(@"indexPath: %@", indexPath);
-    NSLog(@"target: %@", target.name);
-    NSLog(@"cell: %@", cell);
-    
     return cell;
 }
 

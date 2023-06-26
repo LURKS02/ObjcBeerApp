@@ -24,6 +24,17 @@
 		58964D802A42CE81003CDEF9 /* BeerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D7F2A42CE81003CDEF9 /* BeerTableViewController.m */; };
 		58964D842A42D819003CDEF9 /* BeerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D832A42D819003CDEF9 /* BeerTableViewCell.m */; };
 		58964D8B2A42ED74003CDEF9 /* MockBeerDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D8A2A42ED74003CDEF9 /* MockBeerDataManager.m */; };
+		58964D912A443D97003CDEF9 /* BeerHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D902A443D97003CDEF9 /* BeerHomeViewController.m */; };
+		58964D9B2A45279B003CDEF9 /* BeerCategoryButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D9A2A45279B003CDEF9 /* BeerCategoryButton.m */; };
+		58964D9E2A452D03003CDEF9 /* BeerCategoryCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D9D2A452D03003CDEF9 /* BeerCategoryCollectionViewController.m */; };
+		58964DA42A45605F003CDEF9 /* BeerCategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58964DA32A45605F003CDEF9 /* BeerCategory.xib */; };
+		58964DA72A456C75003CDEF9 /* BannerSlideImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DA62A456C75003CDEF9 /* BannerSlideImageView.m */; };
+		58964DAE2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DAD2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m */; };
+		58964DB42A458D1C003CDEF9 /* MainBannerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DB32A458D1C003CDEF9 /* MainBannerCollectionView.m */; };
+		58964DB72A458EFD003CDEF9 /* MainBannerPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DB62A458EFD003CDEF9 /* MainBannerPageControl.m */; };
+		58964DBA2A459281003CDEF9 /* MainBannerImageDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DB92A459281003CDEF9 /* MainBannerImageDataProvider.m */; };
+		58964DBF2A459398003CDEF9 /* BannerFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DBE2A459398003CDEF9 /* BannerFlowLayout.m */; };
+		58964DC22A45943D003CDEF9 /* MainBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DC12A45943D003CDEF9 /* MainBannerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +87,27 @@
 		58964D892A42ED74003CDEF9 /* MockBeerDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockBeerDataManager.h; sourceTree = "<group>"; };
 		58964D8A2A42ED74003CDEF9 /* MockBeerDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockBeerDataManager.m; sourceTree = "<group>"; };
 		58964D8D2A4437B4003CDEF9 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		58964D8F2A443D97003CDEF9 /* BeerHomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerHomeViewController.h; sourceTree = "<group>"; };
+		58964D902A443D97003CDEF9 /* BeerHomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerHomeViewController.m; sourceTree = "<group>"; };
+		58964D992A45279B003CDEF9 /* BeerCategoryButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerCategoryButton.h; sourceTree = "<group>"; };
+		58964D9A2A45279B003CDEF9 /* BeerCategoryButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerCategoryButton.m; sourceTree = "<group>"; };
+		58964D9C2A452D03003CDEF9 /* BeerCategoryCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerCategoryCollectionViewController.h; sourceTree = "<group>"; };
+		58964D9D2A452D03003CDEF9 /* BeerCategoryCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerCategoryCollectionViewController.m; sourceTree = "<group>"; };
+		58964DA32A45605F003CDEF9 /* BeerCategory.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCategory.xib; sourceTree = "<group>"; };
+		58964DA52A456C75003CDEF9 /* BannerSlideImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerSlideImageView.h; sourceTree = "<group>"; };
+		58964DA62A456C75003CDEF9 /* BannerSlideImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerSlideImageView.m; sourceTree = "<group>"; };
+		58964DAC2A458A0E003CDEF9 /* MainBannerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerCollectionViewCell.h; sourceTree = "<group>"; };
+		58964DAD2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerCollectionViewCell.m; sourceTree = "<group>"; };
+		58964DB22A458D1C003CDEF9 /* MainBannerCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerCollectionView.h; sourceTree = "<group>"; };
+		58964DB32A458D1C003CDEF9 /* MainBannerCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerCollectionView.m; sourceTree = "<group>"; };
+		58964DB52A458EFD003CDEF9 /* MainBannerPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerPageControl.h; sourceTree = "<group>"; };
+		58964DB62A458EFD003CDEF9 /* MainBannerPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerPageControl.m; sourceTree = "<group>"; };
+		58964DB82A459281003CDEF9 /* MainBannerImageDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerImageDataProvider.h; sourceTree = "<group>"; };
+		58964DB92A459281003CDEF9 /* MainBannerImageDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerImageDataProvider.m; sourceTree = "<group>"; };
+		58964DBD2A459398003CDEF9 /* BannerFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerFlowLayout.h; sourceTree = "<group>"; };
+		58964DBE2A459398003CDEF9 /* BannerFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerFlowLayout.m; sourceTree = "<group>"; };
+		58964DC02A45943D003CDEF9 /* MainBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerView.h; sourceTree = "<group>"; };
+		58964DC12A45943D003CDEF9 /* MainBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +208,9 @@
 		58964D712A42A6B8003CDEF9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				58964DA82A458373003CDEF9 /* MainBanner */,
+				58964D982A45276D003CDEF9 /* BeerCategory */,
+				58964D8E2A443D6F003CDEF9 /* BeerHome */,
 				58964D812A42D7F3003CDEF9 /* BeerList */,
 				58964D3E2A42A2FE003CDEF9 /* Main.storyboard */,
 				58964D462A42A2FF003CDEF9 /* LaunchScreen.storyboard */,
@@ -235,6 +270,64 @@
 				58964D832A42D819003CDEF9 /* BeerTableViewCell.m */,
 			);
 			path = BeerList;
+			sourceTree = "<group>";
+		};
+		58964D8E2A443D6F003CDEF9 /* BeerHome */ = {
+			isa = PBXGroup;
+			children = (
+				58964D8F2A443D97003CDEF9 /* BeerHomeViewController.h */,
+				58964D902A443D97003CDEF9 /* BeerHomeViewController.m */,
+				58964DA52A456C75003CDEF9 /* BannerSlideImageView.h */,
+				58964DA62A456C75003CDEF9 /* BannerSlideImageView.m */,
+			);
+			path = BeerHome;
+			sourceTree = "<group>";
+		};
+		58964D982A45276D003CDEF9 /* BeerCategory */ = {
+			isa = PBXGroup;
+			children = (
+				58964D992A45279B003CDEF9 /* BeerCategoryButton.h */,
+				58964D9A2A45279B003CDEF9 /* BeerCategoryButton.m */,
+				58964D9C2A452D03003CDEF9 /* BeerCategoryCollectionViewController.h */,
+				58964D9D2A452D03003CDEF9 /* BeerCategoryCollectionViewController.m */,
+				58964DA32A45605F003CDEF9 /* BeerCategory.xib */,
+			);
+			path = BeerCategory;
+			sourceTree = "<group>";
+		};
+		58964DA82A458373003CDEF9 /* MainBanner */ = {
+			isa = PBXGroup;
+			children = (
+				58964DBC2A45936C003CDEF9 /* Layout */,
+				58964DBB2A45935C003CDEF9 /* DataProvider  */,
+				58964DAC2A458A0E003CDEF9 /* MainBannerCollectionViewCell.h */,
+				58964DAD2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m */,
+				58964DB22A458D1C003CDEF9 /* MainBannerCollectionView.h */,
+				58964DB32A458D1C003CDEF9 /* MainBannerCollectionView.m */,
+				58964DB52A458EFD003CDEF9 /* MainBannerPageControl.h */,
+				58964DB62A458EFD003CDEF9 /* MainBannerPageControl.m */,
+				58964DC02A45943D003CDEF9 /* MainBannerView.h */,
+				58964DC12A45943D003CDEF9 /* MainBannerView.m */,
+			);
+			path = MainBanner;
+			sourceTree = "<group>";
+		};
+		58964DBB2A45935C003CDEF9 /* DataProvider  */ = {
+			isa = PBXGroup;
+			children = (
+				58964DB82A459281003CDEF9 /* MainBannerImageDataProvider.h */,
+				58964DB92A459281003CDEF9 /* MainBannerImageDataProvider.m */,
+			);
+			path = "DataProvider ";
+			sourceTree = "<group>";
+		};
+		58964DBC2A45936C003CDEF9 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				58964DBD2A459398003CDEF9 /* BannerFlowLayout.h */,
+				58964DBE2A459398003CDEF9 /* BannerFlowLayout.m */,
+			);
+			path = Layout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				58964D482A42A2FF003CDEF9 /* LaunchScreen.storyboard in Resources */,
+				58964DA42A45605F003CDEF9 /* BeerCategory.xib in Resources */,
 				58964D452A42A2FF003CDEF9 /* Assets.xcassets in Resources */,
 				58964D402A42A2FE003CDEF9 /* Main.storyboard in Resources */,
 			);
@@ -370,14 +464,24 @@
 				58964D4B2A42A2FF003CDEF9 /* main.m in Sources */,
 				58964D842A42D819003CDEF9 /* BeerTableViewCell.m in Sources */,
 				58964D802A42CE81003CDEF9 /* BeerTableViewController.m in Sources */,
+				58964D9B2A45279B003CDEF9 /* BeerCategoryButton.m in Sources */,
+				58964DB42A458D1C003CDEF9 /* MainBannerCollectionView.m in Sources */,
 				58964D3D2A42A2FE003CDEF9 /* ViewController.m in Sources */,
+				58964DA72A456C75003CDEF9 /* BannerSlideImageView.m in Sources */,
 				58964D752A42B56A003CDEF9 /* BeerResponseItem.m in Sources */,
+				58964D912A443D97003CDEF9 /* BeerHomeViewController.m in Sources */,
+				58964DBA2A459281003CDEF9 /* MainBannerImageDataProvider.m in Sources */,
+				58964DAE2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m in Sources */,
 				58964D372A42A2FE003CDEF9 /* AppDelegate.m in Sources */,
 				58964D8B2A42ED74003CDEF9 /* MockBeerDataManager.m in Sources */,
+				58964DBF2A459398003CDEF9 /* BannerFlowLayout.m in Sources */,
 				58964D702A42A4D8003CDEF9 /* Beer.m in Sources */,
+				58964D9E2A452D03003CDEF9 /* BeerCategoryCollectionViewController.m in Sources */,
 				58964D3A2A42A2FE003CDEF9 /* SceneDelegate.m in Sources */,
 				58964D432A42A2FE003CDEF9 /* BeerApp.xcdatamodeld in Sources */,
+				58964DC22A45943D003CDEF9 /* MainBannerView.m in Sources */,
 				58964D792A42BCFC003CDEF9 /* RealBeerDataManager.m in Sources */,
+				58964DB72A458EFD003CDEF9 /* MainBannerPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
