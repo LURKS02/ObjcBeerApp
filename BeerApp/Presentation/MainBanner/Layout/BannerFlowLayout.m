@@ -15,7 +15,6 @@
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.minimumLineSpacing = 0;
         self.minimumInteritemSpacing = 0;
-        self.itemSize = CGSizeMake([UIScreen mainScreen].bounds.size.width, 300);
     }
     return self;
 }

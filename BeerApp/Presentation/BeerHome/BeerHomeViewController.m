@@ -12,18 +12,21 @@
 
 @end
 
+static const CGFloat bannerHeight = 300;
+
 @implementation BeerHomeViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.mainBannerView = [[MainBannerView alloc] initWithFrame:CGRectMake(0, self.view.safeAreaInsets.top, self.view.frame.size.width, 300)];
+    self.mainBannerView = [[MainBannerView alloc] init];
     [self.view addSubview:self.mainBannerView];
 }
 
 - (void) viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-    self.mainBannerView.frame = CGRectMake(0, self.view.safeAreaInsets.top, self.view.frame.size.width, 300);
+    self.mainBannerView.frame = CGRectMake(0, self.view.safeAreaInsets.top, self.view.frame.size.width, bannerHeight);
+    [self.mainBannerView.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }
 
 

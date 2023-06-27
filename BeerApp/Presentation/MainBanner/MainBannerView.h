@@ -6,17 +6,18 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MainBannerPageControl.h"
 #import "MainBannerCollectionView.h"
 #import "MainBannerCollectionViewCell.h"
 #import "MainBannerImageDataProvider.h"
 #import "BannerFlowLayout.h"
+#import "LinePageControl.h"
 
 @interface MainBannerView : UIView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, strong) BannerFlowLayout *layout;
 @property (nonatomic, strong) MainBannerImageDataProvider *imageDataProvider;
 @property (nonatomic, strong) MainBannerCollectionView *collectionView;
-@property (nonatomic, strong) MainBannerPageControl *pageControl;
+
+@property (nonatomic, strong) LinePageControl *linePageControl;
 
 @end

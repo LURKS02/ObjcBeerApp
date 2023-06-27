@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MainBannerImageDataProvider : NSObject
 
 @property (nonatomic, strong) NSArray<NSString*> *imageNames;
+@property (nonatomic, strong) NSArray<NSString*> *bigLabelTexts;
+@property (nonatomic, strong) NSArray<NSString*> *smallLabelTexts;
 
 @end
 

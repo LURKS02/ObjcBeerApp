@@ -31,10 +31,10 @@
 		58964DA72A456C75003CDEF9 /* BannerSlideImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DA62A456C75003CDEF9 /* BannerSlideImageView.m */; };
 		58964DAE2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DAD2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m */; };
 		58964DB42A458D1C003CDEF9 /* MainBannerCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DB32A458D1C003CDEF9 /* MainBannerCollectionView.m */; };
-		58964DB72A458EFD003CDEF9 /* MainBannerPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DB62A458EFD003CDEF9 /* MainBannerPageControl.m */; };
 		58964DBA2A459281003CDEF9 /* MainBannerImageDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DB92A459281003CDEF9 /* MainBannerImageDataProvider.m */; };
 		58964DBF2A459398003CDEF9 /* BannerFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DBE2A459398003CDEF9 /* BannerFlowLayout.m */; };
 		58964DC22A45943D003CDEF9 /* MainBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DC12A45943D003CDEF9 /* MainBannerView.m */; };
+		589A01282A4A885600E6167C /* LinePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01272A4A885600E6167C /* LinePageControl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,14 +100,14 @@
 		58964DAD2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerCollectionViewCell.m; sourceTree = "<group>"; };
 		58964DB22A458D1C003CDEF9 /* MainBannerCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerCollectionView.h; sourceTree = "<group>"; };
 		58964DB32A458D1C003CDEF9 /* MainBannerCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerCollectionView.m; sourceTree = "<group>"; };
-		58964DB52A458EFD003CDEF9 /* MainBannerPageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerPageControl.h; sourceTree = "<group>"; };
-		58964DB62A458EFD003CDEF9 /* MainBannerPageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerPageControl.m; sourceTree = "<group>"; };
 		58964DB82A459281003CDEF9 /* MainBannerImageDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerImageDataProvider.h; sourceTree = "<group>"; };
 		58964DB92A459281003CDEF9 /* MainBannerImageDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerImageDataProvider.m; sourceTree = "<group>"; };
 		58964DBD2A459398003CDEF9 /* BannerFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerFlowLayout.h; sourceTree = "<group>"; };
 		58964DBE2A459398003CDEF9 /* BannerFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerFlowLayout.m; sourceTree = "<group>"; };
 		58964DC02A45943D003CDEF9 /* MainBannerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainBannerView.h; sourceTree = "<group>"; };
 		58964DC12A45943D003CDEF9 /* MainBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerView.m; sourceTree = "<group>"; };
+		589A01262A4A885600E6167C /* LinePageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinePageControl.h; sourceTree = "<group>"; };
+		589A01272A4A885600E6167C /* LinePageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinePageControl.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,14 +298,10 @@
 		58964DA82A458373003CDEF9 /* MainBanner */ = {
 			isa = PBXGroup;
 			children = (
+				589A01252A4A883600E6167C /* PageControl */,
+				589A01242A4A882100E6167C /* CollectionView */,
 				58964DBC2A45936C003CDEF9 /* Layout */,
 				58964DBB2A45935C003CDEF9 /* DataProvider  */,
-				58964DAC2A458A0E003CDEF9 /* MainBannerCollectionViewCell.h */,
-				58964DAD2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m */,
-				58964DB22A458D1C003CDEF9 /* MainBannerCollectionView.h */,
-				58964DB32A458D1C003CDEF9 /* MainBannerCollectionView.m */,
-				58964DB52A458EFD003CDEF9 /* MainBannerPageControl.h */,
-				58964DB62A458EFD003CDEF9 /* MainBannerPageControl.m */,
 				58964DC02A45943D003CDEF9 /* MainBannerView.h */,
 				58964DC12A45943D003CDEF9 /* MainBannerView.m */,
 			);
@@ -328,6 +324,26 @@
 				58964DBE2A459398003CDEF9 /* BannerFlowLayout.m */,
 			);
 			path = Layout;
+			sourceTree = "<group>";
+		};
+		589A01242A4A882100E6167C /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				58964DAC2A458A0E003CDEF9 /* MainBannerCollectionViewCell.h */,
+				58964DAD2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m */,
+				58964DB22A458D1C003CDEF9 /* MainBannerCollectionView.h */,
+				58964DB32A458D1C003CDEF9 /* MainBannerCollectionView.m */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		589A01252A4A883600E6167C /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				589A01262A4A885600E6167C /* LinePageControl.h */,
+				589A01272A4A885600E6167C /* LinePageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -471,6 +487,7 @@
 				58964D752A42B56A003CDEF9 /* BeerResponseItem.m in Sources */,
 				58964D912A443D97003CDEF9 /* BeerHomeViewController.m in Sources */,
 				58964DBA2A459281003CDEF9 /* MainBannerImageDataProvider.m in Sources */,
+				589A01282A4A885600E6167C /* LinePageControl.m in Sources */,
 				58964DAE2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m in Sources */,
 				58964D372A42A2FE003CDEF9 /* AppDelegate.m in Sources */,
 				58964D8B2A42ED74003CDEF9 /* MockBeerDataManager.m in Sources */,
@@ -481,7 +498,6 @@
 				58964D432A42A2FE003CDEF9 /* BeerApp.xcdatamodeld in Sources */,
 				58964DC22A45943D003CDEF9 /* MainBannerView.m in Sources */,
 				58964D792A42BCFC003CDEF9 /* RealBeerDataManager.m in Sources */,
-				58964DB72A458EFD003CDEF9 /* MainBannerPageControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
