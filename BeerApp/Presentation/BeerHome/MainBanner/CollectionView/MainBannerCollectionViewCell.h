@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) UILabel *bigLabel;
 @property (strong, nonatomic) UILabel *smallLabel;
 
-- (void)setupWithImage:(NSString*)image;
+- (void)setupWithImage:(NSString*)image bigLabel:(NSString*)bigLabel smallLabel:(NSString*)smallLabel;
 
 @end
 

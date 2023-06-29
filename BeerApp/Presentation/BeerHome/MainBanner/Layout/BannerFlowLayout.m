@@ -9,9 +9,11 @@
 
 @implementation BannerFlowLayout
 
-- (instancetype)init {
+- (instancetype)init
+{
     self = [super init];
-    if (self) {
+    if (self)
+    {
         self.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         self.minimumLineSpacing = 0;
         self.minimumInteritemSpacing = 0;

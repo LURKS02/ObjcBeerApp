@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainBannerCollectionView : UICollectionView
 
-- (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout;
+- (NSInteger)setupIndexPathForCycleWithImageCount: (NSInteger)imageCount indexPath:(nonnull NSIndexPath *)indexPath;
+- (void)pageCyclesAtEachEdgeWithImageCount: (NSInteger)imageCount;
 
 @end
 
