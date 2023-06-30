@@ -39,4 +39,12 @@
     return self;
 }
 
+- (NSInteger)getNumberOfPages {
+    return self.imageNames.count;
+}
+
+- (NSInteger)getNumberOfItems {
+    return self.imageNames.count + 2;
+}
+
 @end

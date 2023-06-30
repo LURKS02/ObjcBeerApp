@@ -17,7 +17,14 @@
 @property (nonatomic, strong) BannerFlowLayout *layout;
 @property (nonatomic, strong) MainBannerImageDataProvider *imageDataProvider;
 @property (nonatomic, strong) MainBannerCollectionView *collectionView;
-
 @property (nonatomic, strong) LinePageControl *linePageControl;
+
+//Timer
+@property (nonatomic, strong) NSTimer *bannerTimer;
+@property (nonatomic) BOOL isAutoScrollEnabled;
+
+- (void)timerScrollToNextPage;
+- (CGFloat)getWidth;
+- (CGFloat)getHeight;
 
 @end

@@ -15,6 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) NSArray<NSString*> *bigLabelTexts;
 @property (nonatomic, strong) NSArray<NSString*> *smallLabelTexts;
 
+- (NSInteger)getNumberOfPages;
+- (NSInteger)getNumberOfItems;
+
 @end
 
 NS_ASSUME_NONNULL_END

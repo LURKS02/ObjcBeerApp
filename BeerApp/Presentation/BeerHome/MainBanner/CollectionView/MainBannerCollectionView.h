@@ -12,8 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MainBannerCollectionView : UICollectionView
 
+@property (nonatomic) CGFloat currentPage;
+
 - (NSInteger)setupIndexPathForCycleWithImageCount: (NSInteger)imageCount indexPath:(nonnull NSIndexPath *)indexPath;
-- (void)pageCyclesAtEachEdgeWithImageCount: (NSInteger)imageCount;
+
+- (void)setCurrentPage:(CGFloat)currentPage pageCount:(NSInteger)pageCount;
+
+- (CGFloat)getOffsetX;
 
 @end
 

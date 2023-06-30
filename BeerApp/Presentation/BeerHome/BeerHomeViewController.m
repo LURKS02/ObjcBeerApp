@@ -26,6 +26,7 @@ static const CGFloat bannerHeight = 300;
                                                                            self.view.frame.size.width,
                                                         
                                                                            bannerHeight)];
+    
     [self.view addSubview:self.mainBannerView];
 }
 
@@ -37,10 +38,6 @@ static const CGFloat bannerHeight = 300;
                                            self.view.safeAreaInsets.top,
                                            self.view.frame.size.width,
                                            bannerHeight);
-    [self.mainBannerView.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1 inSection:0]
-                                               atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }
-
-
 
 @end

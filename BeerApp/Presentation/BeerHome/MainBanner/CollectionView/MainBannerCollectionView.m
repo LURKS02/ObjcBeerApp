@@ -9,7 +9,6 @@
 
 @implementation MainBannerCollectionView
 
-
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout
 {
     self = [super initWithFrame:frame
@@ -45,23 +44,34 @@
     return index;
 }
 
-// scrollViewDidEndDecelerating에 위치
-// 각 edge로 스크롤되었을 때 인덱스 변경에 따라 스크롤의 위치 변경
-- (void)pageCyclesAtEachEdgeWithImageCount: (NSInteger)imageCount
-{
-    NSInteger currentPage = self.contentOffset.x / self.bounds.size.width;
-    if (currentPage == imageCount + 1)
+- (void)setCurrentPage:(CGFloat)currentPage pageCount:(NSInteger)pageCount{
+    
+    if (_currentPage == pageCount + 1)
     {
         [self scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1
                                                          inSection:0]
                      atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];
+        _currentPage = 1;
     }
-    else if (currentPage == 0)
+    
+    else if (_currentPage == 0)
     {
-        [self scrollToItemAtIndexPath: [NSIndexPath indexPathForRow:imageCount
-                                                          inSection:0]
+        [self scrollToItemAtIndexPath: [NSIndexPath indexPathForRow: pageCount inSection:0]
                      atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];
+        _currentPage = pageCount;
     }
+    
+    else
+    {
+        _currentPage = currentPage;
+    }
+    
+    NSLog(@"currentPage = %f", _currentPage);
+}
+
+
+- (CGFloat)getOffsetX {
+    return self.contentOffset.x;
 }
 
 @end
