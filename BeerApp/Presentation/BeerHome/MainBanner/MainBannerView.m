@@ -7,7 +7,9 @@
 
 #import "MainBannerView.h"
 
-@interface MainBannerView ()
+@interface MainBannerView () <BannerTimerDelegate>
+
+@property (nonatomic, strong) BannerTimer* bannerTimer;
 
 @end
 
@@ -21,14 +23,15 @@
     {
         self.layout = [[BannerFlowLayout alloc] init];
         self.imageDataProvider = [[MainBannerImageDataProvider alloc] init];
+        
         self.collectionView = [[MainBannerCollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:self.layout];
         self.collectionView.dataSource = self;
         self.collectionView.delegate = self;
         
-        self.linePageControl = [[LinePageControl alloc]initWithNumberOfPages:[self.imageDataProvider getNumberOfPages]];
+        self.bannerTimer = [[BannerTimer alloc] init];
+        self.bannerTimer.delegate = self;
         
-        self.bannerTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(scrollToNextPage) userInfo:nil repeats:YES];
-        self.isAutoScrollEnabled = YES;
+        self.linePageControl = [[LinePageControl alloc]initWithNumberOfPages:[self.imageDataProvider getNumberOfPages]];
         
         [self addSubview:self.collectionView];
         [self addSubview:self.linePageControl];
@@ -93,16 +96,8 @@
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    self.isAutoScrollEnabled = NO;
+    [self.bannerTimer setIsAutoScrollEnabled: NO];
 }
-
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-//    if (!decelerate) {
-//        self.isAutoScrollEnabled = YES;
-//        [self startAutoScrollTimerAfterDelay];
-//
-//    }
-//}
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
@@ -112,23 +107,18 @@
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    if (!self.isAutoScrollEnabled)
-    {
-        self.isAutoScrollEnabled = YES;
-        [self startAutoScrollTimerAfterDelay];
-    }
+    [self.bannerTimer startAutoScrollTimer];
     CGFloat currentPage = ([self.collectionView getOffsetX] / [self getWidth]);
-    NSLog(@"scroll location : %f", currentPage);
     [self.collectionView setCurrentPage: currentPage pageCount:[self.imageDataProvider getNumberOfPages]];
     
 }
 
-- (void)timerScrollToNextPage {
-    
-    CGFloat newCurrentPage = self.collectionView.currentPage + 1;
-    [self.collectionView setCurrentPage:newCurrentPage pageCount:[self.imageDataProvider getNumberOfPages]];
-    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:self.collectionView.currentPage inSection:0]
-                                               atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+- (void)bannerTimerDidFire:(BannerTimer *)timer {
+   
+   CGFloat newCurrentPage = [self.collectionView currentPage] + 1;
+   [self.collectionView setCurrentPage:newCurrentPage pageCount:[self.imageDataProvider getNumberOfPages]];
+   [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow: [self.collectionView currentPage] inSection:0]
+                               atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
 }
 
 - (CGFloat)getWidth {
@@ -138,19 +128,6 @@
     return self.bounds.size.width;
 }
 
-- (void)scrollToNextPage {
-    if (!self.isAutoScrollEnabled) {
-        return;
-    }
-    [self timerScrollToNextPage];
-}
-
-- (void)startAutoScrollTimerAfterDelay {
-    [self.bannerTimer invalidate];
-    self.bannerTimer = nil;
-
-    self.bannerTimer = [NSTimer scheduledTimerWithTimeInterval:5.0 target:self selector:@selector(scrollToNextPage) userInfo:nil repeats:YES];
-}
 
 @end
 

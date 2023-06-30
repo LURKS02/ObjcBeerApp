@@ -11,6 +11,7 @@
 #import "MainBannerImageDataProvider.h"
 #import "BannerFlowLayout.h"
 #import "LinePageControl.h"
+#import "BannerTimer.h"
 
 @interface MainBannerView : UIView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
@@ -19,9 +20,6 @@
 @property (nonatomic, strong) MainBannerCollectionView *collectionView;
 @property (nonatomic, strong) LinePageControl *linePageControl;
 
-//Timer
-@property (nonatomic, strong) NSTimer *bannerTimer;
-@property (nonatomic) BOOL isAutoScrollEnabled;
 
 - (void)timerScrollToNextPage;
 - (CGFloat)getWidth;

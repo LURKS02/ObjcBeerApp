@@ -65,8 +65,6 @@
     {
         _currentPage = currentPage;
     }
-    
-    NSLog(@"currentPage = %f", _currentPage);
 }
 
 

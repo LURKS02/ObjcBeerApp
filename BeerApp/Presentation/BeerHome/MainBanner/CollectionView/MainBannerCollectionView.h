@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSInteger)setupIndexPathForCycleWithImageCount: (NSInteger)imageCount indexPath:(nonnull NSIndexPath *)indexPath;
 
+- (NSInteger)getCurrentPage;
 - (void)setCurrentPage:(CGFloat)currentPage pageCount:(NSInteger)pageCount;
 
 - (CGFloat)getOffsetX;

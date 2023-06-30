@@ -32,6 +32,7 @@
 		58964DC22A45943D003CDEF9 /* MainBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DC12A45943D003CDEF9 /* MainBannerView.m */; };
 		589A01282A4A885600E6167C /* LinePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01272A4A885600E6167C /* LinePageControl.m */; };
 		589A012C2A4BED6A00E6167C /* BeerCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589A012B2A4BED6A00E6167C /* BeerCategoryCell.xib */; };
+		589A01462A4EA29B00E6167C /* BannerTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01452A4EA29B00E6167C /* BannerTimer.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,8 @@
 		589A01262A4A885600E6167C /* LinePageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinePageControl.h; sourceTree = "<group>"; };
 		589A01272A4A885600E6167C /* LinePageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinePageControl.m; sourceTree = "<group>"; };
 		589A012B2A4BED6A00E6167C /* BeerCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCategoryCell.xib; sourceTree = "<group>"; };
+		589A01442A4EA29B00E6167C /* BannerTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerTimer.h; sourceTree = "<group>"; };
+		589A01452A4EA29B00E6167C /* BannerTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerTimer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -275,6 +278,7 @@
 		58964DA82A458373003CDEF9 /* MainBanner */ = {
 			isa = PBXGroup;
 			children = (
+				589A01432A4EA26600E6167C /* Timer */,
 				589A01252A4A883600E6167C /* PageControl */,
 				589A01242A4A882100E6167C /* CollectionView */,
 				58964DBC2A45936C003CDEF9 /* Layout */,
@@ -337,6 +341,15 @@
 				589A012B2A4BED6A00E6167C /* BeerCategoryCell.xib */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		589A01432A4EA26600E6167C /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				589A01442A4EA29B00E6167C /* BannerTimer.h */,
+				589A01452A4EA29B00E6167C /* BannerTimer.m */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +487,7 @@
 				58964D842A42D819003CDEF9 /* BeerTableViewCell.m in Sources */,
 				58964D802A42CE81003CDEF9 /* BeerTableViewController.m in Sources */,
 				58964DB42A458D1C003CDEF9 /* MainBannerCollectionView.m in Sources */,
+				589A01462A4EA29B00E6167C /* BannerTimer.m in Sources */,
 				58964D3D2A42A2FE003CDEF9 /* ViewController.m in Sources */,
 				58964D752A42B56A003CDEF9 /* BeerResponseItem.m in Sources */,
 				58964D912A443D97003CDEF9 /* BeerHomeViewController.m in Sources */,
