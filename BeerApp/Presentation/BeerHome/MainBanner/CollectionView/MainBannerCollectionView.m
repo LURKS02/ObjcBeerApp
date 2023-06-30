@@ -46,7 +46,7 @@
 
 - (void)setCurrentPage:(CGFloat)currentPage pageCount:(NSInteger)pageCount{
     
-    if (_currentPage == pageCount + 1)
+    if (currentPage == pageCount + 1)
     {
         [self scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1
                                                          inSection:0]
@@ -54,7 +54,7 @@
         _currentPage = 1;
     }
     
-    else if (_currentPage == 0)
+    else if (currentPage == 0)
     {
         [self scrollToItemAtIndexPath: [NSIndexPath indexPathForRow: pageCount inSection:0]
                      atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];

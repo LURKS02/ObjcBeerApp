@@ -118,6 +118,7 @@
         [self startAutoScrollTimerAfterDelay];
     }
     CGFloat currentPage = ([self.collectionView getOffsetX] / [self getWidth]);
+    NSLog(@"scroll location : %f", currentPage);
     [self.collectionView setCurrentPage: currentPage pageCount:[self.imageDataProvider getNumberOfPages]];
     
 }
