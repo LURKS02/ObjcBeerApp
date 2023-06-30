@@ -6,17 +6,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Banner.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MainBannerImageDataProvider : NSObject
 
-@property (nonatomic, strong) NSArray<NSString*> *imageNames;
-@property (nonatomic, strong) NSArray<NSString*> *bigLabelTexts;
-@property (nonatomic, strong) NSArray<NSString*> *smallLabelTexts;
-
-- (NSInteger)getNumberOfPages;
-- (NSInteger)getNumberOfItems;
+@property (nonatomic, strong) NSArray<Banner*> *banners;
+@property (nonatomic) NSInteger numberOfItems;
 
 @end
 

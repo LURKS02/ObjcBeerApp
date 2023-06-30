@@ -9,12 +9,12 @@
 
 @implementation LinePageControl
 
-- (instancetype)initWithNumberOfPages:(NSInteger) numberOfPages
+- (instancetype)initWithNumberOfItems:(NSInteger) numberOfItems
 {
     self = [super init];
     if (self)
     {
-        self.numberOfPages = numberOfPages;
+        self.numberOfPages = numberOfItems;
         
         self.line = [[UIView alloc] init];
         self.line.backgroundColor = [UIColor colorWithWhite:1.0

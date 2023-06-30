@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIView* activeLine;
 @property (nonatomic, strong) UIView* extraLine;
 
-- (instancetype)initWithNumberOfPages:(NSInteger) numberOfPages;
+- (instancetype)initWithNumberOfItems:(NSInteger) numberOfItems;
 - (void)lineAnimationWithCurrentPage:(CGFloat)currentPage;
 
 @end

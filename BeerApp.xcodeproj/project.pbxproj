@@ -33,6 +33,7 @@
 		589A01282A4A885600E6167C /* LinePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01272A4A885600E6167C /* LinePageControl.m */; };
 		589A012C2A4BED6A00E6167C /* BeerCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589A012B2A4BED6A00E6167C /* BeerCategoryCell.xib */; };
 		589A01462A4EA29B00E6167C /* BannerTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01452A4EA29B00E6167C /* BannerTimer.m */; };
+		589A01492A4EBB3000E6167C /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01482A4EBB3000E6167C /* Banner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,8 @@
 		589A012B2A4BED6A00E6167C /* BeerCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCategoryCell.xib; sourceTree = "<group>"; };
 		589A01442A4EA29B00E6167C /* BannerTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerTimer.h; sourceTree = "<group>"; };
 		589A01452A4EA29B00E6167C /* BannerTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerTimer.m; sourceTree = "<group>"; };
+		589A01472A4EBB3000E6167C /* Banner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
+		589A01482A4EBB3000E6167C /* Banner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,8 @@
 			children = (
 				58964D6E2A42A4D8003CDEF9 /* Beer.h */,
 				58964D6F2A42A4D8003CDEF9 /* Beer.m */,
+				589A01472A4EBB3000E6167C /* Banner.h */,
+				589A01482A4EBB3000E6167C /* Banner.m */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -492,6 +497,7 @@
 				58964D752A42B56A003CDEF9 /* BeerResponseItem.m in Sources */,
 				58964D912A443D97003CDEF9 /* BeerHomeViewController.m in Sources */,
 				58964DBA2A459281003CDEF9 /* MainBannerImageDataProvider.m in Sources */,
+				589A01492A4EBB3000E6167C /* Banner.m in Sources */,
 				589A01282A4A885600E6167C /* LinePageControl.m in Sources */,
 				58964DAE2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m in Sources */,
 				58964D372A42A2FE003CDEF9 /* AppDelegate.m in Sources */,

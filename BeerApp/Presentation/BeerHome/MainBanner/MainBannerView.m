@@ -31,7 +31,7 @@
         self.bannerTimer = [[BannerTimer alloc] init];
         self.bannerTimer.delegate = self;
         
-        self.linePageControl = [[LinePageControl alloc]initWithNumberOfPages:[self.imageDataProvider getNumberOfPages]];
+        self.linePageControl = [[LinePageControl alloc]initWithNumberOfItems:[self.imageDataProvider numberOfItems]];
         
         [self addSubview:self.collectionView];
         [self addSubview:self.linePageControl];
@@ -45,10 +45,10 @@
 {
     [super layoutSubviews];
     self.layout.itemSize = self.bounds.size;
-    NSInteger numberOfPages = [self.imageDataProvider getNumberOfPages];
+    NSInteger numberOfPages = [self.imageDataProvider numberOfItems];
     if (numberOfPages > 1)
     {
-        if ([self.collectionView getOffsetX] == 0.0)
+        if ([self.collectionView offset].x == 0.0)
         {
             [self.collectionView scrollToItemAtIndexPath: [NSIndexPath indexPathForRow: 1 inSection:0]
                                         atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];
@@ -81,18 +81,18 @@
 {
     MainBannerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"bannerCell" forIndexPath:indexPath];
     
-    NSInteger index = [self.collectionView setupIndexPathForCycleWithImageCount:[self.linePageControl numberOfPages] indexPath:indexPath];
+    NSInteger index = [self.collectionView setupIndexPathForCycleWithIndexPath:indexPath];
+    Banner* target = [self.imageDataProvider.banners objectAtIndex: index];
     
-    [cell setupWithImage: self.imageDataProvider.imageNames[index]
-                bigLabel:
-     self.imageDataProvider.bigLabelTexts[index]             smallLabel:
-     self.imageDataProvider.smallLabelTexts[index]];
+    [cell setupWithImage:target.imageName
+                bigLabel:target.bigLabel
+              smallLabel:target.smallLabel];
     return cell;
 }
 
 - (NSInteger)collectionView:(nonnull UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self.imageDataProvider getNumberOfItems];
+    return [self.imageDataProvider numberOfItems] + 2;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
@@ -101,22 +101,22 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    CGFloat currentPage = ([self.collectionView getOffsetX] / [self getWidth]);
+    CGFloat currentPage = ([self.collectionView  offset].x / [self getWidth]);
     [self.linePageControl lineAnimationWithCurrentPage:currentPage];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     [self.bannerTimer startAutoScrollTimer];
-    CGFloat currentPage = ([self.collectionView getOffsetX] / [self getWidth]);
-    [self.collectionView setCurrentPage: currentPage pageCount:[self.imageDataProvider getNumberOfPages]];
+    CGFloat currentPage = ([self.collectionView offset].x / [self getWidth]);
+    [self.collectionView setCurrentPage: currentPage];
     
 }
 
 - (void)bannerTimerDidFire:(BannerTimer *)timer {
    
    CGFloat newCurrentPage = [self.collectionView currentPage] + 1;
-   [self.collectionView setCurrentPage:newCurrentPage pageCount:[self.imageDataProvider getNumberOfPages]];
+    [self.collectionView setCurrentPage:newCurrentPage];
    [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow: [self.collectionView currentPage] inSection:0]
                                atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
 }

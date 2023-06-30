@@ -26,14 +26,14 @@
 
 // cellForItemAtIndexPath에 위치
 // 셀에 표시할 데이터의 인덱스 설정
-- (NSInteger)setupIndexPathForCycleWithImageCount: (NSInteger)imageCount indexPath:(nonnull NSIndexPath *)indexPath
+- (NSInteger)setupIndexPathForCycleWithIndexPath:(nonnull NSIndexPath *)indexPath
 {
     NSInteger index = 0;
     if (indexPath.row == 0)
     {
-        index = imageCount - 1;
+        index = self.numberOfItems - 1;
     }
-    else if (indexPath.row == imageCount + 1)
+    else if (indexPath.row == self.numberOfItems + 1)
     {
         index = 0;
     }
@@ -44,10 +44,14 @@
     return index;
 }
 
-- (void)setCurrentPage:(CGFloat)currentPage pageCount:(NSInteger)pageCount{
+- (void)setCurrentPage:(CGFloat)currentPage {
     
-    if (currentPage == pageCount + 1)
+    NSLog(@"current page before: %f", currentPage);
+    NSLog(@"self number of items : %d", self.numberOfItems);
+    
+    if (currentPage == self.numberOfItems + 1)
     {
+        NSLog(@"changing position");
         [self scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1
                                                          inSection:0]
                      atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];
@@ -56,20 +60,31 @@
     
     else if (currentPage == 0)
     {
-        [self scrollToItemAtIndexPath: [NSIndexPath indexPathForRow: pageCount inSection:0]
+        [self scrollToItemAtIndexPath: [NSIndexPath indexPathForRow: self.numberOfItems inSection:0]
                      atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];
-        _currentPage = pageCount;
+        _currentPage = self.numberOfItems;
     }
     
     else
     {
         _currentPage = currentPage;
     }
+    NSLog(@"current page : %f", _currentPage);
 }
 
+//- (void)
 
-- (CGFloat)getOffsetX {
-    return self.contentOffset.x;
+- (CGPoint)offset {
+    return self.contentOffset;
 }
+
+- (NSInteger)numberOfItems {
+    return [self numberOfItemsInSection:0] - 2;
+}
+
+- (NSInteger)numberOfPages {
+    return [self numberOfItemsInSection:0];
+}
+
 
 @end
