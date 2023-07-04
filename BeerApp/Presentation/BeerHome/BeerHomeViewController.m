@@ -70,7 +70,7 @@ static const CGFloat bannerHeight = 300;
         // BeerCategoryCollectionView Constraints
         [self.beerCategoryCollectionView.leadingAnchor constraintEqualToAnchor:self.scrollView.contentLayoutGuide.leadingAnchor],
         [self.beerCategoryCollectionView.trailingAnchor constraintEqualToAnchor:self.scrollView.contentLayoutGuide.trailingAnchor],
-        [self.beerCategoryCollectionView.topAnchor constraintEqualToAnchor:self.mainBannerView.bottomAnchor],
+        [self.beerCategoryCollectionView.topAnchor constraintEqualToAnchor:self.mainBannerView.bottomAnchor constant: 20],
         [self.beerCategoryCollectionView.bottomAnchor constraintEqualToAnchor:self.scrollView.contentLayoutGuide.bottomAnchor]
     ]];
 }

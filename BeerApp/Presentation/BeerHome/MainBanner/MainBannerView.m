@@ -113,12 +113,19 @@
     
 }
 
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView
+{
+    CGFloat currentPage = ([self.collectionView offset].x / [self getWidth]);
+    [self.collectionView setCurrentPage: currentPage];
+}
+
 - (void)bannerTimerDidFire:(BannerTimer *)timer {
    
    CGFloat newCurrentPage = [self.collectionView currentPage] + 1;
-    [self.collectionView setCurrentPage:newCurrentPage];
-   [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow: [self.collectionView currentPage] inSection:0]
-                               atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    [self.collectionView scrollToItemAtIndexPath: [NSIndexPath indexPathForRow:newCurrentPage inSection:0] atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
+    //[self.collectionView setCurrentPage:newCurrentPage];
+//   [self.collectionView scrollToItemAtIndexPath:[NSIndexPath indexPathForRow: [self.collectionView currentPage] inSection:0]
+//                               atScrollPosition:UICollectionViewScrollPositionLeft animated:NO];
 }
 
 - (CGFloat)getWidth {

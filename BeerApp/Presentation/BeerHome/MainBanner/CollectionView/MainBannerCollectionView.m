@@ -48,7 +48,6 @@
     
     if (currentPage == self.numberOfItems + 1)
     {
-        NSLog(@"changing position");
         [self scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1
                                                          inSection:0]
                      atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];
