@@ -16,9 +16,9 @@
 
 @implementation MainBannerView
 
-- (instancetype)initWithFrame:(CGRect)frame
+- (instancetype)init
 {
-    self = [super initWithFrame:frame];
+    self = [super init];
     if (self)
     {
         self.layout = [[BannerFlowLayout alloc] init];
@@ -64,15 +64,15 @@
     
     [NSLayoutConstraint activateConstraints:
      @[
-        [self.linePageControl.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:20],
-        [self.linePageControl.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-20],
-        [self.linePageControl.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-20],
-        [self.linePageControl.heightAnchor constraintEqualToConstant:2],
-        
         [self.collectionView.leadingAnchor constraintEqualToAnchor:self.leadingAnchor],
         [self.collectionView.trailingAnchor constraintEqualToAnchor:self.trailingAnchor],
         [self.collectionView.topAnchor constraintEqualToAnchor:self.topAnchor],
-        [self.collectionView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor]
+        [self.collectionView.bottomAnchor constraintEqualToAnchor:self.bottomAnchor],
+        
+        [self.linePageControl.leadingAnchor constraintEqualToAnchor:self.leadingAnchor constant:20],
+        [self.linePageControl.trailingAnchor constraintEqualToAnchor:self.trailingAnchor constant:-20],
+        [self.linePageControl.bottomAnchor constraintEqualToAnchor:self.bottomAnchor constant:-20],
+        [self.linePageControl.heightAnchor constraintEqualToConstant:2]
     ]];
 }
 

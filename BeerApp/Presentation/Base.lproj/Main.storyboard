@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bqd-UX-mkh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q8L-Rt-MAr">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -99,21 +99,34 @@
             <point key="canvasLocation" x="791.60305343511448" y="-2.1126760563380285"/>
         </scene>
         <!--Beer Home View Controller-->
-        <scene sceneID="y8I-mN-i1i">
+        <scene sceneID="EvH-Ex-Kbn">
             <objects>
-                <viewController id="Bqd-UX-mkh" customClass="BeerHomeViewController" sceneMemberID="viewController">
-                    <scrollView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="Hi0-OP-7h3">
+                <viewController id="q8L-Rt-MAr" customClass="BeerHomeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="huM-4Q-2Li">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <viewLayoutGuide key="safeArea" id="8wB-Fb-MC4"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="contentLayoutGuide" id="7qo-hT-jQ1"/>
-                        <viewLayoutGuide key="frameLayoutGuide" id="ffk-I4-oMd"/>
-                    </scrollView>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBo-Q4-H51">
+                                <rect key="frame" x="76" y="384" width="240" height="128"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="eJo-pT-NnO"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="kO4-Mu-ST9"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="gyf-dd-YdK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="gyf-dd-YdK" firstAttribute="trailing" secondItem="RBo-Q4-H51" secondAttribute="trailing" id="Nj5-6B-1ff"/>
+                            <constraint firstItem="RBo-Q4-H51" firstAttribute="leading" secondItem="gyf-dd-YdK" secondAttribute="leading" id="TJi-lP-8tv"/>
+                            <constraint firstItem="gyf-dd-YdK" firstAttribute="bottom" secondItem="RBo-Q4-H51" secondAttribute="bottom" id="TaP-Jc-PPK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="RBo-Q4-H51" id="GUQ-Vd-8pL"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YSK-v8-CGH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VPW-K9-0S4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1591.6030534351144" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="2302" y="-2"/>
         </scene>
     </scenes>
     <resources>

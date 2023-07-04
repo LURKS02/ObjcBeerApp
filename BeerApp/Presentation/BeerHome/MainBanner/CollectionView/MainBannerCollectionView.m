@@ -46,9 +46,6 @@
 
 - (void)setCurrentPage:(CGFloat)currentPage {
     
-    NSLog(@"current page before: %f", currentPage);
-    NSLog(@"self number of items : %d", self.numberOfItems);
-    
     if (currentPage == self.numberOfItems + 1)
     {
         NSLog(@"changing position");
@@ -69,7 +66,6 @@
     {
         _currentPage = currentPage;
     }
-    NSLog(@"current page : %f", _currentPage);
 }
 
 //- (void)

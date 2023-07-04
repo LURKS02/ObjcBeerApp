@@ -31,9 +31,14 @@
 		58964DBF2A459398003CDEF9 /* BannerFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DBE2A459398003CDEF9 /* BannerFlowLayout.m */; };
 		58964DC22A45943D003CDEF9 /* MainBannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964DC12A45943D003CDEF9 /* MainBannerView.m */; };
 		589A01282A4A885600E6167C /* LinePageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01272A4A885600E6167C /* LinePageControl.m */; };
-		589A012C2A4BED6A00E6167C /* BeerCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589A012B2A4BED6A00E6167C /* BeerCategoryCell.xib */; };
+		589A012C2A4BED6A00E6167C /* BeerCategoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589A012B2A4BED6A00E6167C /* BeerCategoryCollectionViewCell.xib */; };
 		589A01462A4EA29B00E6167C /* BannerTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01452A4EA29B00E6167C /* BannerTimer.m */; };
 		589A01492A4EBB3000E6167C /* Banner.m in Sources */ = {isa = PBXBuildFile; fileRef = 589A01482A4EBB3000E6167C /* Banner.m */; };
+		589C0C452A525C39001DEF8A /* BeerCategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C0C442A525C39001DEF8A /* BeerCategoryCollectionViewCell.m */; };
+		589C0C482A526CB9001DEF8A /* BeerCategoryCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C0C472A526CB9001DEF8A /* BeerCategoryCollectionView.m */; };
+		589C0C4C2A52734B001DEF8A /* BeerCategoryDataProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C0C4B2A52734B001DEF8A /* BeerCategoryDataProvider.m */; };
+		589C0C4F2A52739C001DEF8A /* BeerCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 589C0C4E2A52739C001DEF8A /* BeerCategory.m */; };
+		589C0C512A53B10F001DEF8A /* BeerCategoryCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 589C0C502A53B10F001DEF8A /* BeerCategoryCollectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,11 +105,20 @@
 		58964DC12A45943D003CDEF9 /* MainBannerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainBannerView.m; sourceTree = "<group>"; };
 		589A01262A4A885600E6167C /* LinePageControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LinePageControl.h; sourceTree = "<group>"; };
 		589A01272A4A885600E6167C /* LinePageControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LinePageControl.m; sourceTree = "<group>"; };
-		589A012B2A4BED6A00E6167C /* BeerCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCategoryCell.xib; sourceTree = "<group>"; };
+		589A012B2A4BED6A00E6167C /* BeerCategoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCategoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		589A01442A4EA29B00E6167C /* BannerTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BannerTimer.h; sourceTree = "<group>"; };
 		589A01452A4EA29B00E6167C /* BannerTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BannerTimer.m; sourceTree = "<group>"; };
 		589A01472A4EBB3000E6167C /* Banner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Banner.h; sourceTree = "<group>"; };
 		589A01482A4EBB3000E6167C /* Banner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Banner.m; sourceTree = "<group>"; };
+		589C0C432A525C39001DEF8A /* BeerCategoryCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerCategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		589C0C442A525C39001DEF8A /* BeerCategoryCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerCategoryCollectionViewCell.m; sourceTree = "<group>"; };
+		589C0C462A526CB9001DEF8A /* BeerCategoryCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerCategoryCollectionView.h; sourceTree = "<group>"; };
+		589C0C472A526CB9001DEF8A /* BeerCategoryCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerCategoryCollectionView.m; sourceTree = "<group>"; };
+		589C0C4A2A52734B001DEF8A /* BeerCategoryDataProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerCategoryDataProvider.h; sourceTree = "<group>"; };
+		589C0C4B2A52734B001DEF8A /* BeerCategoryDataProvider.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerCategoryDataProvider.m; sourceTree = "<group>"; };
+		589C0C4D2A52739C001DEF8A /* BeerCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerCategory.h; sourceTree = "<group>"; };
+		589C0C4E2A52739C001DEF8A /* BeerCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerCategory.m; sourceTree = "<group>"; };
+		589C0C502A53B10F001DEF8A /* BeerCategoryCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerCategoryCollectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,6 +214,8 @@
 				58964D6F2A42A4D8003CDEF9 /* Beer.m */,
 				589A01472A4EBB3000E6167C /* Banner.h */,
 				589A01482A4EBB3000E6167C /* Banner.m */,
+				589C0C4D2A52739C001DEF8A /* BeerCategory.h */,
+				589C0C4E2A52739C001DEF8A /* BeerCategory.m */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -272,6 +288,7 @@
 		58964D8E2A443D6F003CDEF9 /* BeerHome */ = {
 			isa = PBXGroup;
 			children = (
+				589C0C492A52732A001DEF8A /* DataProvider */,
 				589A01292A4BD3D200E6167C /* BeerCategory */,
 				58964DA82A458373003CDEF9 /* MainBanner */,
 				58964D8F2A443D97003CDEF9 /* BeerHomeViewController.h */,
@@ -343,7 +360,12 @@
 		589A012A2A4BEB5E00E6167C /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				589A012B2A4BED6A00E6167C /* BeerCategoryCell.xib */,
+				589A012B2A4BED6A00E6167C /* BeerCategoryCollectionViewCell.xib */,
+				589C0C432A525C39001DEF8A /* BeerCategoryCollectionViewCell.h */,
+				589C0C442A525C39001DEF8A /* BeerCategoryCollectionViewCell.m */,
+				589C0C502A53B10F001DEF8A /* BeerCategoryCollectionView.xib */,
+				589C0C462A526CB9001DEF8A /* BeerCategoryCollectionView.h */,
+				589C0C472A526CB9001DEF8A /* BeerCategoryCollectionView.m */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -355,6 +377,15 @@
 				589A01452A4EA29B00E6167C /* BannerTimer.m */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		589C0C492A52732A001DEF8A /* DataProvider */ = {
+			isa = PBXGroup;
+			children = (
+				589C0C4A2A52734B001DEF8A /* BeerCategoryDataProvider.h */,
+				589C0C4B2A52734B001DEF8A /* BeerCategoryDataProvider.m */,
+			);
+			path = DataProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -460,8 +491,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				589C0C512A53B10F001DEF8A /* BeerCategoryCollectionView.xib in Resources */,
 				58964D482A42A2FF003CDEF9 /* LaunchScreen.storyboard in Resources */,
-				589A012C2A4BED6A00E6167C /* BeerCategoryCell.xib in Resources */,
+				589A012C2A4BED6A00E6167C /* BeerCategoryCollectionViewCell.xib in Resources */,
 				58964D452A42A2FF003CDEF9 /* Assets.xcassets in Resources */,
 				58964D402A42A2FE003CDEF9 /* Main.storyboard in Resources */,
 			);
@@ -491,6 +523,7 @@
 				58964D4B2A42A2FF003CDEF9 /* main.m in Sources */,
 				58964D842A42D819003CDEF9 /* BeerTableViewCell.m in Sources */,
 				58964D802A42CE81003CDEF9 /* BeerTableViewController.m in Sources */,
+				589C0C4C2A52734B001DEF8A /* BeerCategoryDataProvider.m in Sources */,
 				58964DB42A458D1C003CDEF9 /* MainBannerCollectionView.m in Sources */,
 				589A01462A4EA29B00E6167C /* BannerTimer.m in Sources */,
 				58964D3D2A42A2FE003CDEF9 /* ViewController.m in Sources */,
@@ -508,6 +541,9 @@
 				58964D432A42A2FE003CDEF9 /* BeerApp.xcdatamodeld in Sources */,
 				58964DC22A45943D003CDEF9 /* MainBannerView.m in Sources */,
 				58964D792A42BCFC003CDEF9 /* RealBeerDataManager.m in Sources */,
+				589C0C4F2A52739C001DEF8A /* BeerCategory.m in Sources */,
+				589C0C482A526CB9001DEF8A /* BeerCategoryCollectionView.m in Sources */,
+				589C0C452A525C39001DEF8A /* BeerCategoryCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

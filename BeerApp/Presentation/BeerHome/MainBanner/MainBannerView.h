@@ -21,8 +21,6 @@
 @property (nonatomic, strong) MainBannerCollectionView *collectionView;
 @property (nonatomic, strong) LinePageControl *linePageControl;
 
-
-- (void)timerScrollToNextPage;
 - (CGFloat)getWidth;
 - (CGFloat)getHeight;
 
