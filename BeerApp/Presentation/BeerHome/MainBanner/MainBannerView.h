@@ -11,13 +11,17 @@
 #import "MainBannerImageDataProvider.h"
 #import "BannerFlowLayout.h"
 #import "LinePageControl.h"
+#import "BannerTimer.h"
 
 @interface MainBannerView : UIView <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
-@property (nonatomic, strong) BannerFlowLayout *layout;
-@property (nonatomic, strong) MainBannerImageDataProvider *imageDataProvider;
-@property (nonatomic, strong) MainBannerCollectionView *collectionView;
 
+@property (nonatomic, strong) MainBannerImageDataProvider *imageDataProvider;
+@property (nonatomic, strong) BannerFlowLayout *layout;
+@property (nonatomic, strong) MainBannerCollectionView *collectionView;
 @property (nonatomic, strong) LinePageControl *linePageControl;
+
+- (CGFloat)getWidth;
+- (CGFloat)getHeight;
 
 @end

@@ -7,13 +7,21 @@
 
 #import <UIKit/UIKit.h>
 #import "MainBannerCollectionViewCell.h"
+#import "MainBannerImageDataProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MainBannerCollectionView : UICollectionView
 
-- (NSInteger)setupIndexPathForCycleWithImageCount: (NSInteger)imageCount indexPath:(nonnull NSIndexPath *)indexPath;
-- (void)pageCyclesAtEachEdgeWithImageCount: (NSInteger)imageCount;
+@property (nonatomic) CGFloat currentPage;
+@property (nonatomic) CGPoint offset;
+@property (nonatomic) NSInteger numberOfItems;
+@property (nonatomic) NSInteger numberOfPages;
+
+- (NSInteger)setupIndexPathForCycleWithIndexPath:(nonnull NSIndexPath *)indexPath;
+
+- (void)setCurrentPage:(CGFloat)currentPage;
+
 
 @end
 

@@ -9,7 +9,6 @@
 
 @implementation MainBannerCollectionView
 
-
 - (instancetype)initWithFrame:(CGRect)frame collectionViewLayout:(UICollectionViewLayout *)layout
 {
     self = [super initWithFrame:frame
@@ -27,14 +26,14 @@
 
 // cellForItemAtIndexPath에 위치
 // 셀에 표시할 데이터의 인덱스 설정
-- (NSInteger)setupIndexPathForCycleWithImageCount: (NSInteger)imageCount indexPath:(nonnull NSIndexPath *)indexPath
+- (NSInteger)setupIndexPathForCycleWithIndexPath:(nonnull NSIndexPath *)indexPath
 {
     NSInteger index = 0;
     if (indexPath.row == 0)
     {
-        index = imageCount - 1;
+        index = self.numberOfItems - 1;
     }
-    else if (indexPath.row == imageCount + 1)
+    else if (indexPath.row == self.numberOfItems + 1)
     {
         index = 0;
     }
@@ -45,23 +44,42 @@
     return index;
 }
 
-// scrollViewDidEndDecelerating에 위치
-// 각 edge로 스크롤되었을 때 인덱스 변경에 따라 스크롤의 위치 변경
-- (void)pageCyclesAtEachEdgeWithImageCount: (NSInteger)imageCount
-{
-    NSInteger currentPage = self.contentOffset.x / self.bounds.size.width;
-    if (currentPage == imageCount + 1)
+- (void)setCurrentPage:(CGFloat)currentPage {
+    
+    if (currentPage == self.numberOfItems + 1)
     {
         [self scrollToItemAtIndexPath:[NSIndexPath indexPathForRow:1
                                                          inSection:0]
                      atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];
+        _currentPage = 1;
     }
+    
     else if (currentPage == 0)
     {
-        [self scrollToItemAtIndexPath: [NSIndexPath indexPathForRow:imageCount
-                                                          inSection:0]
+        [self scrollToItemAtIndexPath: [NSIndexPath indexPathForRow: self.numberOfItems inSection:0]
                      atScrollPosition: UICollectionViewScrollPositionLeft animated:NO];
+        _currentPage = self.numberOfItems;
+    }
+    
+    else
+    {
+        _currentPage = currentPage;
     }
 }
+
+//- (void)
+
+- (CGPoint)offset {
+    return self.contentOffset;
+}
+
+- (NSInteger)numberOfItems {
+    return [self numberOfItemsInSection:0] - 2;
+}
+
+- (NSInteger)numberOfPages {
+    return [self numberOfItemsInSection:0];
+}
+
 
 @end
