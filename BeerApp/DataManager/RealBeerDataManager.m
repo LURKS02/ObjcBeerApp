@@ -22,17 +22,22 @@
 }
 
 - (void) fetchBeers:(void (^)(NSArray<Beer *> *, NSError *))completion {
+    
     NSURL *url = [NSURL URLWithString:@"https://api.punkapi.com/v2/beers"];
+    
     NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        if (data) {
+        if (data)
+        {
             NSError *jsonError;
             NSArray *json = [NSJSONSerialization JSONObjectWithData:data options:0 error:&jsonError];
-            if (jsonError) {
+            if (jsonError)
+            {
                 completion(nil, jsonError);
                 return;
             }
             NSMutableArray<Beer*> *beers = [NSMutableArray array];
-            for (NSDictionary *item in json) {
+            for (NSDictionary *item in json)
+            {
                 BeerResponseItem *beerResponseItem = [[BeerResponseItem alloc] initWithJSON: item];
                 [beers addObject:[beerResponseItem toDomainModel]];
             }

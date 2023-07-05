@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Banner : NSObject
 
-@property (strong, nonatomic) NSString* imageName;
-@property (strong, nonatomic) NSString* bigLabel;
-@property (strong, nonatomic) NSString* smallLabel;
+@property NSString* imageName;
+@property NSString* bigLabel;
+@property NSString* smallLabel;
 
 - (instancetype)initWithImageName: (NSString*)imageName bigLabel:(NSString*)bigLabel smallLabel:(NSString*)smallLabel;
 

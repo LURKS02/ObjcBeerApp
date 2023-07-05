@@ -11,7 +11,9 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    self.beerCategoryImageView.backgroundColor = [UIColor blueColor];
+    //self.beerCategoryImageView.layer.cornerRadius = self.bounds.size.width / 2;
+    //self.beerCategoryImageView.clipsToBounds = YES;
+    
 }
 
 @end

@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BeerCategory : NSObject
 
-@property (nonatomic, strong) NSString* categoryImage;
-@property (nonatomic, strong) NSString* categoryName;
+@property NSString* categoryImage;
+@property NSString* categoryName;
 
 - (instancetype)initWithCategoryImage:(NSString*) categoryImage categoryName:(NSString*)categoryName;
 

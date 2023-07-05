@@ -7,12 +7,12 @@
 
 #import "ViewController.h"
 #import "MainBannerView.h"
-#import "BeerCategoryCollectionView.h"
+#import "BeerCategoryCollectionViewCell.h"
 #import "BeerCategoryDataProvider.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface BeerHomeViewController : ViewController
+@interface BeerHomeViewController : ViewController <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 

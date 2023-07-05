@@ -10,16 +10,28 @@
 
 @interface BeerHomeViewController ()
 
-@property (nonatomic, strong) BeerCategoryCollectionView *beerCategoryCollectionView;
+#pragma mark - Properties
+
+@property (nonatomic, strong) UICollectionView *beerCategoryCollectionView;
 @property (nonatomic, strong) BeerCategoryDataProvider *beerCategoryDataProvider;
+
++ (NSString*) beerCategoryCellId;
 
 @end
 
 static const CGFloat bannerHeight = 300;
 
-
-
 @implementation BeerHomeViewController
+
+
+#pragma mark - Class Methods
+
++ (NSString*) beerCategoryCellId {
+    return @"beerCategory";
+}
+
+
+#pragma mark - View LifeCycle
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -28,12 +40,16 @@ static const CGFloat bannerHeight = 300;
     self.beerCategoryDataProvider = [[BeerCategoryDataProvider alloc] init];
     UICollectionViewFlowLayout *categoryLayout = [[UICollectionViewFlowLayout alloc] init];
     
-    self.beerCategoryCollectionView = [[BeerCategoryCollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:categoryLayout categorys:self.beerCategoryDataProvider.categorys];
+    self.beerCategoryCollectionView = [[UICollectionView alloc]initWithFrame:CGRectZero collectionViewLayout:categoryLayout];
+    [self.beerCategoryCollectionView setDataSource:self];
+    [self.beerCategoryCollectionView setDelegate:self];
     
+    [self registerBeerCategoryCell];
     [self.scrollView addSubview:self.mainBannerView];
     [self.scrollView addSubview:self.beerCategoryCollectionView];
     
     [self setupConstraints];
+    
     
 }
 
@@ -52,11 +68,6 @@ static const CGFloat bannerHeight = 300;
     [NSLayoutConstraint activateConstraints:
      @[
         
-//        [self.scrollView.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
-//        [self.scrollView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
-//        [self.scrollView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
-//        [self.scrollView.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor],
-        
         [self.scrollView.contentLayoutGuide.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor],
         [self.scrollView.contentLayoutGuide.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
         [self.scrollView.contentLayoutGuide.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor],
@@ -73,6 +84,27 @@ static const CGFloat bannerHeight = 300;
         [self.beerCategoryCollectionView.topAnchor constraintEqualToAnchor:self.mainBannerView.bottomAnchor constant: 20],
         [self.beerCategoryCollectionView.bottomAnchor constraintEqualToAnchor:self.scrollView.contentLayoutGuide.bottomAnchor]
     ]];
+}
+
+- (void)registerBeerCategoryCell {
+    UINib *nib = [UINib nibWithNibName:@"BeerCategoryCollectionViewCell" bundle:nil];
+    [self.beerCategoryCollectionView registerNib: nib forCellWithReuseIdentifier: [BeerHomeViewController beerCategoryCellId]];
+}
+
+
+#pragma mark - <UICollectionViewDataSource>
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
+    return self.beerCategoryDataProvider.categorys.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    BeerCategoryCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier: [BeerHomeViewController beerCategoryCellId] forIndexPath:indexPath];
+    BeerCategory *category = [self.beerCategoryDataProvider.categorys objectAtIndex:indexPath.row];
+    UIImage *image = [UIImage imageNamed:category.categoryImage];
+    [cell.beerCategoryImageView setImage:image];
+    [cell.beerCategoryLabel setText:category.categoryName];
+    return cell;
 }
 
 @end

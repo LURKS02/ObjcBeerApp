@@ -11,11 +11,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Beer : NSObject
 
-@property (strong, nonatomic) NSString* name;
-@property (strong, nonatomic) NSString* tagline;
-@property (strong, nonatomic) NSString* firstBrewed;
-@property (strong, nonatomic) NSString* beerDescription;
-@property (strong, nonatomic) NSURL* imageURL;
+@property NSString* name;
+@property NSString* tagline;
+@property NSString* firstBrewed;
+@property NSString* beerDescription;
+@property NSURL* imageURL;
 
 - (instancetype)initWithName: (NSString*) name
                      tagline: (NSString*) tagline

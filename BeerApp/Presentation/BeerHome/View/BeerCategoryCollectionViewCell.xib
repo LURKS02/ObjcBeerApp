@@ -41,8 +41,8 @@
             </collectionViewCellContentView>
             <size key="customSize" width="158" height="195"/>
             <connections>
-                <outlet property="beerCategoryImageView" destination="ScP-Ew-TzL" id="EXk-jT-Cx1"/>
-                <outlet property="beerCategoryLabel" destination="BPU-nU-ZkV" id="mx7-s1-vW0"/>
+                <outlet property="beerCategoryImageView" destination="ScP-Ew-TzL" id="0bi-jS-uxW"/>
+                <outlet property="beerCategoryLabel" destination="BPU-nU-ZkV" id="Uus-5R-VkP"/>
             </connections>
             <point key="canvasLocation" x="329.7709923664122" y="52.464788732394368"/>
         </collectionViewCell>
