@@ -10,6 +10,7 @@
 
 @interface BeerHomeViewController ()
 
+
 #pragma mark - Properties
 
 @property (nonatomic, strong) UICollectionView *beerCategoryCollectionView;
@@ -19,10 +20,13 @@
 
 @end
 
+
+#pragma mark - Static Variables
+
 static const CGFloat bannerHeight = 300;
 
-@implementation BeerHomeViewController
 
+@implementation BeerHomeViewController
 
 #pragma mark - Class Methods
 
@@ -59,6 +63,10 @@ static const CGFloat bannerHeight = 300;
     [super viewDidLayoutSubviews];
 }
 
+- (void)setUpSubViews {
+    self.mainBannerView = [[MainBannerView alloc] init];
+}
+
 - (void)setupConstraints
 {
     self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
@@ -78,7 +86,6 @@ static const CGFloat bannerHeight = 300;
         [self.mainBannerView.topAnchor constraintEqualToAnchor:self.scrollView.contentLayoutGuide.topAnchor],
         [self.mainBannerView.heightAnchor constraintEqualToConstant:bannerHeight],
         
-        // BeerCategoryCollectionView Constraints
         [self.beerCategoryCollectionView.leadingAnchor constraintEqualToAnchor:self.scrollView.contentLayoutGuide.leadingAnchor],
         [self.beerCategoryCollectionView.trailingAnchor constraintEqualToAnchor:self.scrollView.contentLayoutGuide.trailingAnchor],
         [self.beerCategoryCollectionView.topAnchor constraintEqualToAnchor:self.mainBannerView.bottomAnchor constant: 20],

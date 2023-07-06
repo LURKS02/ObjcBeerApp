@@ -218,8 +218,8 @@
 		58964D712A42A6B8003CDEF9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				58964D8E2A443D6F003CDEF9 /* BeerHome */,
-				58964D812A42D7F3003CDEF9 /* BeerList */,
+				58964D8E2A443D6F003CDEF9 /* Home */,
+				58964D812A42D7F3003CDEF9 /* List */,
 				58964D3E2A42A2FE003CDEF9 /* Main.storyboard */,
 				58964D462A42A2FF003CDEF9 /* LaunchScreen.storyboard */,
 			);
@@ -260,7 +260,7 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
-		58964D812A42D7F3003CDEF9 /* BeerList */ = {
+		58964D812A42D7F3003CDEF9 /* List */ = {
 			isa = PBXGroup;
 			children = (
 				58964D7E2A42CE81003CDEF9 /* BeerTableViewController.h */,
@@ -268,10 +268,10 @@
 				58964D822A42D819003CDEF9 /* BeerTableViewCell.h */,
 				58964D832A42D819003CDEF9 /* BeerTableViewCell.m */,
 			);
-			path = BeerList;
+			path = List;
 			sourceTree = "<group>";
 		};
-		58964D8E2A443D6F003CDEF9 /* BeerHome */ = {
+		58964D8E2A443D6F003CDEF9 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				589C0C542A5552F1001DEF8A /* Controller */,
@@ -279,7 +279,7 @@
 				589C0C492A52732A001DEF8A /* DataProvider */,
 				58964DA82A458373003CDEF9 /* MainBanner */,
 			);
-			path = BeerHome;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		58964DA82A458373003CDEF9 /* MainBanner */ = {
