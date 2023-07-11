@@ -9,6 +9,6 @@
 
 @protocol BeerDataManagerProtocol <NSObject>
 
-- (void) fetchBeers:(void (^)(NSArray<Beer *> *, NSError *))completion;
+- (void)fetchBeers:(void (^)(NSArray<Beer *> *, NSError *))completion;
 
 @end

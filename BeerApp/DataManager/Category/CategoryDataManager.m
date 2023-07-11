@@ -1,18 +1,28 @@
 //
-//  HomeDataProvider.m
+//  CategoryDataManager.m
 //  BeerApp
 //
-//  Created by 지혜 on 2023/07/03.
+//  Created by 지혜 on 2023/07/06.
 //
 
-#import "BeerCategoryDataProvider.h"
+#import "CategoryDataManager.h"
 
-@implementation BeerCategoryDataProvider
+@implementation CategoryDataManager
 
-- (instancetype) init {
-    self = [super init];
-    if (self) {
-        self.categorys = @[
++ (instancetype)sharedInstance {
+    
+    static CategoryDataManager* sharedInstance = nil;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        sharedInstance = [[CategoryDataManager alloc] init];
+    });
+    return sharedInstance;
+}
+
+- (void)fetchBeerCategories: (void (^)(NSArray<BeerCategory *> *, NSError *))completion
+{
+    NSArray<BeerCategory *> *categories = @[
         [[BeerCategory alloc] initWithCategoryImage:@"award" categoryName:@"공모전"],
         [[BeerCategory alloc]initWithCategoryImage:@"book" categoryName:@"독서"],
         [[BeerCategory alloc]initWithCategoryImage:@"bus" categoryName:@"교통"],
@@ -22,13 +32,11 @@
         [[BeerCategory alloc]initWithCategoryImage:@"option" categoryName:@"업무"],
         [[BeerCategory alloc]initWithCategoryImage:@"rocket" categoryName:@"여행"],
         [[BeerCategory alloc]initWithCategoryImage:@"shoes" categoryName:@"패션"]
-        ];
+    ];
+    
+    if (completion) {
+        completion(categories, nil);
     }
-    return self;
-}
-
-- (BeerCategory*)beerCategoryAtIndex:(NSInteger)index {
-    return self.categorys[index];
 }
 
 @end

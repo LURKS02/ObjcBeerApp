@@ -13,8 +13,8 @@
                      tagline: (NSString*) tagline
                  firstBrewed: (NSString*) firstBrewed
              beerDescription: (NSString*) beerDescription
-                    imageURL: (NSURL*) imageURL {
-    
+                    imageURL: (NSURL*) imageURL
+{
     self = [super init];
     if (self != nil) {
         _name = name;
@@ -23,7 +23,6 @@
         _beerDescription = beerDescription;
         _imageURL = imageURL;
     }
-    
     return self;
 }
 

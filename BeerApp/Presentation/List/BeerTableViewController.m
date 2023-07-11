@@ -73,6 +73,7 @@
     cell.beerFirstBrewed.text = target.firstBrewed;
     cell.beerDescription.text = target.beerDescription;
     
+    
     return cell;
 }
 

@@ -9,9 +9,9 @@
 
 @implementation BeerCategory
 
-- (instancetype)initWithCategoryImage:(NSString*) categoryImage categoryName:(NSString*)categoryName {
+- (instancetype)initWithCategoryImage:(NSString*) categoryImage categoryName:(NSString*)categoryName
+{
     self = [super init];
-    
     if (self) {
         _categoryImage = categoryImage;
         _categoryName = categoryName;

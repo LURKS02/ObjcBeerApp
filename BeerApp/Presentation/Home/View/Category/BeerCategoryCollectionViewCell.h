@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BeerCategoryCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *beerCategoryImageView;
 @property (weak, nonatomic) IBOutlet UILabel *beerCategoryLabel;
-
+@property (weak, nonatomic) IBOutlet UIView *backgroundRectangle;
 @end
 
 NS_ASSUME_NONNULL_END
