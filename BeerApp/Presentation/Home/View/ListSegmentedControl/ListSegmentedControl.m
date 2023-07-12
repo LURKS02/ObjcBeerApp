@@ -30,7 +30,6 @@
         self.underline = [[UIView alloc] init];
         self.underline.backgroundColor = [UIColor blackColor];
         [self addSubview: self.underline];
-        
         self.selectedSegmentIndex = 0;
     }
     return self;

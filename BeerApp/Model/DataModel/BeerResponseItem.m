@@ -12,11 +12,11 @@
 - (instancetype)initWithJSON:(NSDictionary *)json {
     self = [super init];
     if (self) {
-        _name = json[@"name"];
-        _tagline = json[@"tagline"];
-        _firstBrewed = json[@"first_brewed"];
-        _beerDescription = json[@"description"];
-        _imageURL = [NSURL URLWithString: json[@"image_url"]];
+        _name = [json[@"name"] isKindOfClass:[NSNull class]] ? @"" : json[@"name"];
+        _tagline = [json[@"tagline"] isKindOfClass:[NSNull class]] ? @"" : json[@"tagline"];
+        _firstBrewed = [json[@"first_brewed"] isKindOfClass:[NSNull class]] ? @"" : json[@"first_brewed"];
+        _beerDescription = [json[@"description"] isKindOfClass:[NSNull class]] ? @"" : json[@"description"];
+        _imageURL = [json[@"image_url"] isKindOfClass:[NSNull class]] ? nil : [NSURL URLWithString: json[@"image_url"]];
     }
     return self;
 }

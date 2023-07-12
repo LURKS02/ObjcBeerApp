@@ -82,16 +82,8 @@ static const CGFloat segmentedControlHeight = 50;
         }
     }];
     
-    [RealBeerDataManager.sharedInstance fetchBeers:^(NSArray<Beer *> * _Nonnull beers, NSError * _Nonnull error) {
-        if (error) {
-            NSLog(@"Error: %@", error);
-        } else {
-            self.beers = beers;
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self.mainTableView reloadData];
-            });
-        }
-    }];
+    NSURL* beerURL = [NSURL URLWithString:@"https://api.punkapi.com/v2/beers?page=1&per_page=80"];
+    [self setupBeers:beerURL];
     
 }
 
@@ -261,7 +253,42 @@ static const CGFloat segmentedControlHeight = 50;
 
 - (void)segmentedControlChanged:(ListSegmentedControl *)sender {
     NSInteger selectedSegment = sender.selectedSegmentIndex;
+    
+    if (selectedSegment == 0){
+        NSURL* beerURL = [NSURL URLWithString:@"https://api.punkapi.com/v2/beers?page=1&per_page=80"];
+        
+        [self setupBeers:beerURL];
+        
+    }
+    
+    else if (selectedSegment == 1) {
+        NSURL* beerURL = [NSURL URLWithString:@"https://api.punkapi.com/v2/beers?page=2&per_page=80"];
+        
+        [self setupBeers:beerURL];
+        
+    }
+    
+    else if (selectedSegment == 2) {
+        NSURL* beerURL = [NSURL URLWithString:@"https://api.punkapi.com/v2/beers?page=3&per_page=80"];
+        
+        [self setupBeers:beerURL];
+        
+    }
+    
     [sender moveUnderlineToIndex:selectedSegment];
+}
+
+- (void)setupBeers:(NSURL*)url {
+    [RealBeerDataManager.sharedInstance fetchBeers:url completion: ^(NSArray<Beer *> * _Nonnull beers, NSError * _Nonnull error) {
+        if (error) {
+            NSLog(@"Error: %@", error);
+        } else {
+            self.beers = beers;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.mainTableView reloadData];
+            });
+        }
+    }];
 }
 
 @end
