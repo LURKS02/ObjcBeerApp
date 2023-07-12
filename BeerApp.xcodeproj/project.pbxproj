@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5820654B2A5D0365009E5DE4 /* BeerMiniListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 582065492A5D0365009E5DE4 /* BeerMiniListTableViewCell.m */; };
 		5820654C2A5D0365009E5DE4 /* BeerMiniListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5820654A2A5D0365009E5DE4 /* BeerMiniListTableViewCell.xib */; };
+		582065502A5E59D5009E5DE4 /* ListSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 5820654F2A5E59D5009E5DE4 /* ListSegmentedControl.m */; };
 		58964D372A42A2FE003CDEF9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D362A42A2FE003CDEF9 /* AppDelegate.m */; };
 		58964D3A2A42A2FE003CDEF9 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D392A42A2FE003CDEF9 /* SceneDelegate.m */; };
 		58964D3D2A42A2FE003CDEF9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58964D3C2A42A2FE003CDEF9 /* ViewController.m */; };
@@ -62,6 +63,8 @@
 		582065482A5D0365009E5DE4 /* BeerMiniListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeerMiniListTableViewCell.h; sourceTree = "<group>"; };
 		582065492A5D0365009E5DE4 /* BeerMiniListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeerMiniListTableViewCell.m; sourceTree = "<group>"; };
 		5820654A2A5D0365009E5DE4 /* BeerMiniListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BeerMiniListTableViewCell.xib; sourceTree = "<group>"; };
+		5820654E2A5E59D5009E5DE4 /* ListSegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListSegmentedControl.h; sourceTree = "<group>"; };
+		5820654F2A5E59D5009E5DE4 /* ListSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListSegmentedControl.m; sourceTree = "<group>"; };
 		58964D322A42A2FE003CDEF9 /* BeerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58964D352A42A2FE003CDEF9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		58964D362A42A2FE003CDEF9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -155,6 +158,15 @@
 				5820654A2A5D0365009E5DE4 /* BeerMiniListTableViewCell.xib */,
 			);
 			path = "Beer+MiniList";
+			sourceTree = "<group>";
+		};
+		5820654D2A5E5968009E5DE4 /* ListSegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				5820654E2A5E59D5009E5DE4 /* ListSegmentedControl.h */,
+				5820654F2A5E59D5009E5DE4 /* ListSegmentedControl.m */,
+			);
+			path = ListSegmentedControl;
 			sourceTree = "<group>";
 		};
 		58964D292A42A2FE003CDEF9 = {
@@ -365,6 +377,7 @@
 		589C0C532A5552ED001DEF8A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5820654D2A5E5968009E5DE4 /* ListSegmentedControl */,
 				5820653F2A5D0086009E5DE4 /* Beer+MiniList */,
 				589C0C602A56C296001DEF8A /* Category */,
 				58964DA82A458373003CDEF9 /* MainBanner */,
@@ -566,6 +579,7 @@
 				58964DBA2A459281003CDEF9 /* MainBannerImageDataProvider.m in Sources */,
 				589A01492A4EBB3000E6167C /* Banner.m in Sources */,
 				589A01282A4A885600E6167C /* LinePageControl.m in Sources */,
+				582065502A5E59D5009E5DE4 /* ListSegmentedControl.m in Sources */,
 				58964DAE2A458A0E003CDEF9 /* MainBannerCollectionViewCell.m in Sources */,
 				58964D372A42A2FE003CDEF9 /* AppDelegate.m in Sources */,
 				58964D8B2A42ED74003CDEF9 /* MockBeerDataManager.m in Sources */,

@@ -23,7 +23,7 @@
 
 - (void) fetchBeers:(void (^)(NSArray<Beer *> *, NSError *))completion {
     
-    NSURL *url = [NSURL URLWithString:@"https://api.punkapi.com/v2/beers"];
+    NSURL *url = [NSURL URLWithString:@"https://api.punkapi.com/v2/beers?page=1&per_page=80"];
     
     NSURLSessionDataTask *downloadTask = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (data)

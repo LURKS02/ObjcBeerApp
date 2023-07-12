@@ -12,9 +12,11 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     
+    /*
     self.beerImageView.backgroundColor = [UIColor redColor];
     self.beerName.backgroundColor = [UIColor blueColor];
     self.beerTagline.backgroundColor = [UIColor greenColor];
+    */
     
 }
 

@@ -105,24 +105,9 @@
                     <view key="view" contentMode="scaleToFill" id="huM-4Q-2Li">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBo-Q4-H51">
-                                <rect key="frame" x="76" y="384" width="240" height="128"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="eJo-pT-NnO"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="kO4-Mu-ST9"/>
-                            </scrollView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gyf-dd-YdK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="gyf-dd-YdK" firstAttribute="trailing" secondItem="RBo-Q4-H51" secondAttribute="trailing" id="Nj5-6B-1ff"/>
-                            <constraint firstItem="RBo-Q4-H51" firstAttribute="leading" secondItem="gyf-dd-YdK" secondAttribute="leading" id="TJi-lP-8tv"/>
-                            <constraint firstItem="gyf-dd-YdK" firstAttribute="bottom" secondItem="RBo-Q4-H51" secondAttribute="bottom" id="TaP-Jc-PPK"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="scrollView" destination="RBo-Q4-H51" id="GUQ-Vd-8pL"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VPW-K9-0S4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
