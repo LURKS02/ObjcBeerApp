@@ -15,6 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype)sharedInstance;
 
+- (void)fetchBeer:(NSInteger)beerID completion:(void (^)(Beer*, NSError*))completion;
 - (void)fetchBeers:(NSURL*)url completion:(void(^)(NSArray<Beer*> *, NSError *)) completion;
 
 @end

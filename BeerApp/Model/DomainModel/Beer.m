@@ -9,14 +9,16 @@
 
 @implementation Beer
 
-- (instancetype)initWithName: (NSString*) name
-                     tagline: (NSString*) tagline
-                 firstBrewed: (NSString*) firstBrewed
-             beerDescription: (NSString*) beerDescription
-                    imageURL: (NSURL*) imageURL
+- (instancetype)initWithID: (NSInteger) beerID
+                      name: (NSString*) name
+                   tagline: (NSString*) tagline
+               firstBrewed: (NSString*) firstBrewed
+           beerDescription: (NSString*) beerDescription
+                  imageURL: (NSURL*) imageURL
 {
     self = [super init];
     if (self != nil) {
+        _beerID = beerID;
         _name = name;
         _tagline = tagline;
         _firstBrewed = firstBrewed;
@@ -25,5 +27,6 @@
     }
     return self;
 }
+
 
 @end

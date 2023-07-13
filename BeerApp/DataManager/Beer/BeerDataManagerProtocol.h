@@ -9,6 +9,7 @@
 
 @protocol BeerDataManagerProtocol <NSObject>
 
+- (void)fetchBeer:(NSInteger)beerID completion:(void (^)(Beer*, NSError*))completion;
 - (void)fetchBeers:(void (^)(NSArray<Beer *> *, NSError *))completion;
 
 @end

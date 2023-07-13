@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface BeerResponseItem : NSObject
 
+@property NSInteger beerID;
 @property NSString* name;
 @property NSString* tagline;
 @property NSString* firstBrewed;

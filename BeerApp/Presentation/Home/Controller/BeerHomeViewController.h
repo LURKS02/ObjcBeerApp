@@ -14,6 +14,7 @@
 #import "MockBeerDataManager.h"
 #import "CategoryDataManager.h"
 #import "ListSegmentedControl.h"
+#import "BeerDetailViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

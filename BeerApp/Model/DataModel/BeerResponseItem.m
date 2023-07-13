@@ -12,6 +12,7 @@
 - (instancetype)initWithJSON:(NSDictionary *)json {
     self = [super init];
     if (self) {
+        _beerID = [json[@"id"] isKindOfClass:[NSNull class]] ? 0 : json[@"id"];
         _name = [json[@"name"] isKindOfClass:[NSNull class]] ? @"" : json[@"name"];
         _tagline = [json[@"tagline"] isKindOfClass:[NSNull class]] ? @"" : json[@"tagline"];
         _firstBrewed = [json[@"first_brewed"] isKindOfClass:[NSNull class]] ? @"" : json[@"first_brewed"];
@@ -22,11 +23,12 @@
 }
 
 - (Beer*)toDomainModel {
-    return [[Beer alloc] initWithName: self.name
-                              tagline: self.tagline
-                          firstBrewed: self.firstBrewed
-                      beerDescription: self.beerDescription
-                             imageURL: self.imageURL];
+    return [[Beer alloc] initWithID: self.beerID
+                               name: self.name
+                            tagline: self.tagline
+                        firstBrewed: self.firstBrewed
+                    beerDescription: self.beerDescription
+                           imageURL: self.imageURL];
 }
 
 
